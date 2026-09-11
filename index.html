@@ -4,12 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keyword" content="portofolio siswa">
+    <meta name="keyword" content="">
     <meta name="author" content="Titis Tsabitha">
-    <meta name="desc" content="profil siswa latihan uji serkom smkn 1 jenangan">
-    <title>Titis Tsabitha</title>
+    <meta name="desc" content="">
+    <title>Lat Uji Serkom</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="icon" type="image/x-icon" href="assets/img/iconn12.jpg">
+
+    <style>
+        /* ===== LIGHTBOX FOTO PROJECT ===== */
+        .project-img {
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .project-img:hover {
+            transform: scale(1.03);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .lightbox.aktif {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85%;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .lightbox .tutup {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .lightbox .tutup:hover {
+            color: #4d47ff;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +89,7 @@
         </p>
         <div class="row p-4">
             <div class="col d-flex rounded-5 mx-2 text-light"
-                style="width: 60%; background-color: rgba(240, 248, 255, 0.094);box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.2);">
+                style="width: 60%;background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));border: 1px solid rgba(255,255,255,0.12);box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
                 <div class="p-2">
                     <img src="./assets/img/code.png" width="65px" height="65px" class="p-2 rounded-circle"
                         style="background-color: #ffffff27;" />
@@ -49,7 +101,7 @@
             </div>
 
             <div class="col d-flex rounded-5 mx-2 text-light"
-                style="width: 60%; background-color: rgba(240, 248, 255, 0.094); box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.2);">
+                style="width: 60%;background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));border: 1px solid rgba(255,255,255,0.12);box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
                 <div class="p-2">
                     <img src="./assets/img/data-server.png" width="65px" height="65px" class="p-2 rounded-circle"
                         style="background-color: #ffffff27;" />
@@ -61,7 +113,7 @@
             </div>
 
             <div class="col d-flex rounded-5 mx-2 text-light"
-                style="width: 60%; background-color: rgba(240, 248, 255, 0.094); box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.2);">
+                style="width: 60%;background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));border: 1px solid rgba(255,255,255,0.12);box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
                 <div class="p-2">
                     <img src="./assets/img/device.png" width="65px" height="65px" class="p-2 rounded-circle"
                         style="background-color: #ffffff27;" />
@@ -75,7 +127,7 @@
 
         <div class="row p-4" style="margin-top: -30px;">
             <div class="col d-flex rounded-5 mx-2 text-light"
-                style="width: 60%; background-color: rgba(240, 248, 255, 0.094); box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.2);">
+                style="width: 60%;background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));border: 1px solid rgba(255,255,255,0.12);box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
                 <div class="p-2">
                     <img src="./assets/img/github.png" width="65px" height="65px" class="p-2 rounded-circle"
                         style="background-color: #ffffff27;" />
@@ -87,7 +139,7 @@
             </div>
 
             <div class="col d-flex rounded-5 mx-2 text-light"
-                style="width: 60%; background-color: rgba(240, 248, 255, 0.094); box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.2);">
+                style="width: 60%;background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));border: 1px solid rgba(255,255,255,0.12);box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
                 <div class="p-2">
                     <img src="./assets/img/bug.png" width="65px" height="65px" class="p-2 rounded-circle"
                         style="background-color: #ffffff27;" />
@@ -99,7 +151,7 @@
             </div>
 
             <div class="col d-flex rounded-5 mx-2 text-light"
-                style="width: 60%; background-color: rgba(240, 248, 255, 0.094); box-shadow: 0px 0px 6px 3px rgba(255, 255, 255, 0.2);">
+                style="width: 60%;background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));border: 1px solid rgba(255,255,255,0.12);box-shadow: 0 8px 25px rgba(0,0,0,0.25);">
                 <div class="p-2">
                     <img src="./assets/img/monitor.png" width="65px" height="65px" class="p-2 rounded-circle"
                         style="background-color: #ffffff27;" />
@@ -177,7 +229,7 @@
                         box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.15);
                     ">
 
-                                <img src="./assets/img/news.png" class="img-fluid rounded-3 w-100"
+                                <img src="./assets/img/news.png" class="img-fluid rounded-3 w-100 project-img"
                                     style="height: 190px; object-fit: cover;" alt="Website Berita Online">
 
                                 <p class="text-light fs-5 fw-bold text-center mt-3 mb-1">
@@ -196,7 +248,7 @@
                         box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.15);
                     ">
 
-                                <img src="./assets/img/mading.png" class="img-fluid rounded-3 w-100"
+                                <img src="./assets/img/mading.png" class="img-fluid rounded-3 w-100 project-img"
                                     style="height: 190px; object-fit: cover;" alt="Website Mading Online">
 
                                 <p class="text-light fs-5 fw-bold text-center mt-3 mb-1">
@@ -215,7 +267,7 @@
                         box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.15);
                     ">
 
-                                <img src="./assets/img/pengumuman.png" class="img-fluid rounded-3 w-100"
+                                <img src="./assets/img/pengumuman.png" class="img-fluid rounded-3 w-100 project-img"
                                     style="height: 190px; object-fit: cover;" alt="Website Pengumuman Sekolah">
 
                                 <p class="text-light fs-5 fw-bold text-center mt-3 mb-1">
@@ -276,7 +328,48 @@ informasi produk, serta memberikan pengalaman berbelanja yang dan nyaman.
             <p>&copy; 2026 Titis Tsabitha Resti Umayya - Profil Siswa</p>
         </div>
 
+        <!-- LIGHTBOX -->
+        <div class="lightbox" id="lightbox">
+            <span class="tutup" onclick="tutupFoto()">&times;</span>
+            <img id="gambarBesar" src="" alt="Foto Project">
+        </div>
+
         <script src="assets/js/bootstrap.bundle.min.js"> </script>
+
+        <script>
+            // Ambil semua gambar project
+            const gambarProject = document.querySelectorAll('.project-img');
+            const lightbox = document.getElementById('lightbox');
+            const gambarBesar = document.getElementById('gambarBesar');
+
+            // Saat gambar diklik → tampilkan lightbox
+            gambarProject.forEach(function (gambar) {
+                gambar.addEventListener('click', function () {
+                    lightbox.classList.add('aktif');
+                    gambarBesar.src = this.src;
+                });
+            });
+
+            // Tutup lightbox kalau area gelap diklik
+            lightbox.addEventListener('click', function (e) {
+                if (e.target === lightbox) {
+                    tutupFoto();
+                }
+            });
+
+            // Fungsi tutup
+            function tutupFoto() {
+                lightbox.classList.remove('aktif');
+                gambarBesar.src = '';
+            }
+
+            // Tutup pakai tombol ESC
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    tutupFoto();
+                }
+            });
+        </script>
 </body>
 
 </html>
